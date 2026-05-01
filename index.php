@@ -13,11 +13,10 @@
 
 </head>
 
-<body>
+<body  id="background">
   <header></header>
   <main>
 
-    <div id="background" style=></div>
 
 
 
