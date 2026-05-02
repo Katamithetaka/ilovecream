@@ -138,3 +138,7 @@ a {
 main {
     overflow: hidden;
 }
+
+.widget {
+    height: fit-content;
+}
