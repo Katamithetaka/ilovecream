@@ -7,8 +7,12 @@
     font-style: normal;
 }
 
+
+
 body {
     overflow-x: hidden;
+    cursor: url('assets/cursor.gif'), auto;
+
 }
 
 h1 {
@@ -27,17 +31,40 @@ main {
 }
 
 #background {
-    background-image: url('assets/icecream_eat_loop.gif'); 
+    --backgroundSize: 800px;
+    background-image: url('assets/bg.png');
+    background-size: var(--backgroundSize), var(--backgroundSize);
+    background-repeat: repeat;
+    background-position: 0 0, 0 var(--backgroundSize);
+    animation: moveBackgrounds 5s linear infinite;
+    display: grid;
+    image-rendering: pixelated;
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes moveBackgrounds {
+  from {
+    background-position: 0 var(--backgroundSize);
+  }
+  to {
+    background-position: var(--backgroundSize) 0;
+  }
 }
 
 #container {
     display: flex;
     flex-direction: row;
     width: 70vw; 
-    background: rgba(255, 230, 189, 1);
+    background: rgba(255, 230, 189, 0.9);
     border-radius: 4px;
     border: 1px solid rgb(230, 82, 25);
     justify-content: space-between;
+    padding: 10px;
+}
+
+a {
+    color: rgb(230, 82, 25);
 }
 
 #left {
@@ -92,7 +119,6 @@ main {
 
 
     #right {
-        justify-content: center;
         gap: 10px;
     }
 }
@@ -101,7 +127,6 @@ main {
 
 
     #right {
-        justify-content: center;
         gap: 10px;
     }
 }
